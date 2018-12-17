@@ -35,8 +35,4 @@ public class ProServiceImpl implements IProService{
         return dao.selOne(id);
     }
 
-    @Override
-    public User selOneUser(String name) {
-        return dao.SelOneUser(name);
-    }
 }

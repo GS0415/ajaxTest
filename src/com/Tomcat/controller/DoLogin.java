@@ -22,12 +22,16 @@ public class DoLogin extends HttpServlet {
         String pw =req.getParameter("pwd");
         String name=req.getParameter("username");
         user=service.selOneUser(name);
+        System.out.println(name);
         if (user!=null){
             if (user.getPassWord().equals(pw)){
                 resp.sendRedirect("list");
             }else {
-
+                resp.sendRedirect("login");
             }
+        }else {
+            resp.sendRedirect("register");
         }
+
     }
 }

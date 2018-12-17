@@ -36,6 +36,6 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User selOneUser(String name) {
-        return null;
+            return dao.selOneUser(name);
     }
 }

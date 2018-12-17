@@ -64,7 +64,7 @@ public class ProDaoImpl implements IProDao{
         }, id);
     }
 
-    @Override
+   /* @Override
     public User SelOneUser(String name) {
         return JdbcUtil.selectOne("select * from user where username=?", new IRowMap<User>() {
             @Override
@@ -81,7 +81,7 @@ public class ProDaoImpl implements IProDao{
                 return user;
             }
         }, name);
-    }
+    }*/
 
 
 }

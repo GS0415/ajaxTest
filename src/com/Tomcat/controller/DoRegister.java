@@ -1,8 +1,8 @@
 package com.Tomcat.controller;
 
 import com.Tomcat.pojo.User;
-import com.Tomcat.service.IProService;
-import com.Tomcat.service.ProServiceImpl;
+import com.Tomcat.service.IUserService;
+import com.Tomcat.service.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet("/doRegister")
 public class DoRegister extends HttpServlet {
-    private IProService service = new ProServiceImpl();
+    private IUserService service = new UserServiceImpl();
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

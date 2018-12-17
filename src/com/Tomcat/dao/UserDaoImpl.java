@@ -1,8 +1,11 @@
 package com.Tomcat.dao;
 
 import com.Tomcat.pojo.User;
+import com.Tomcat.utils.IRowMap;
 import com.Tomcat.utils.JdbcUtil;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserDaoImpl implements IUserDao {
@@ -33,6 +36,20 @@ public class UserDaoImpl implements IUserDao {
 
     @Override
     public User selOneUser(String name) {
-        return null;
+        return JdbcUtil.selectOne("select * from user where username=?", new IRowMap<User>() {
+            @Override
+            public User rowMap(ResultSet rs) {
+                User user = new User();
+                try {
+                    user.setPassWord(rs.getString("password"));
+                    user.setUserId(rs.getInt("id"));
+                    user.setUserName(rs.getString("username"));
+                    user.setTel(rs.getString("tel"));
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return user;
+            }
+        }, name);
     }
 }

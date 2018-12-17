@@ -29,8 +29,8 @@
 <div></div>
 <div id="login">
     <form action="doLogin">
-        账号：<input type="text"><br>
-        密码：<input type="text"><br>
+        账号：<input type="text" name="username"><br>
+        密码：<input type="text" name="pwd"><br>
         <input type="submit" value="登录">
         <a href="register">注册</a>
     </form>
