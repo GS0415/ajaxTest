@@ -88,56 +88,54 @@ public class JdbcUtil {  //  Jdbc 工具类  写所有方法
     }
 
     //创建（封装） 查询一个方法
-    public static <T> T selectOne(String sql, IRowMap<T> rm, Object...obj) {
+    public static <T> T selectOne(String sql, IRowMap<T> rm, Object... obj) {
         T t = null;
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs=null;
+        ResultSet rs = null;
 
         conn = getConnection();
         try {
             pstmt = conn.prepareStatement(sql);
-            if (obj != null){
-                for (int i = 0; i< obj.length;i++){
-                    pstmt.setObject(i+1,obj[i]);
+            if (obj != null) {
+                for (int i = 0; i < obj.length; i++) {
+                    pstmt.setObject(i + 1, obj[i]);
                 }
             }
             rs = pstmt.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 t = rm.rowMap(rs);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        close(rs,pstmt,conn);
+        close(rs, pstmt, conn);
         return t;
     }
 
     //创建（封装） 查询方法
-    public static <T> List<T> select(String sql, IRowMap<T> rm, Object...obj) {
+    public static <T> List<T> select(String sql, IRowMap<T> rm, Object... obj) {
         List<T> list = new ArrayList<>();
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs=null;
-
+        ResultSet rs = null;
         conn = getConnection();
         try {
             pstmt = conn.prepareStatement(sql);
-            if (obj != null){
-                for (int i = 0; i< obj.length;i++){
-                    pstmt.setObject(i+1,obj[i]);
+            if (obj != null) {
+                for (int i = 0; i < obj.length; i++) {
+                    pstmt.setObject(i + 1, obj[i]);
                 }
             }
-             rs = pstmt.executeQuery();
-            while (rs.next()){
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
                 T t = rm.rowMap(rs);
                 list.add(t);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        close(rs,pstmt,conn);
-
+        close(rs, pstmt, conn);
         /*System.out.println("工具类中");
         for (T t:list
         ) {

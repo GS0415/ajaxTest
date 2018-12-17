@@ -53,33 +53,33 @@
                     data: {"us": un, "pwd": pwd, "pwds": pwds, "tel": tel},
                     success: function (result) {
                         /*console.log(result);*/
-                        if (result ==="1") {
+                        if (result === "1") {
                             $("#tip").text("可以使用");
-                            $("#but").attr("disabled",true);
+                            $("#but").attr("disabled", true);
                         }
-                        if (result ==="2") {
+                        if (result === "2") {
                             $("#tip").text("用户名已存在");
-                            $("#but").attr("disabled",true);
+                            $("#but").attr("disabled", true);
                         }
-                        if (result ==="12") {
+                        if (result === "12") {
                             $("#tip").text("可以使用");
                             $("#tip1").text("密码不一致");
-                            $("#but").attr("disabled",true);
+                            $("#but").attr("disabled", true);
                         }
-                        if (result ==="11") {
+                        if (result === "11") {
                             $("#tip").text("可以使用");
                             $("#tip1").text("√");
-                            $("#but").attr("disabled",false);
+                            $("#but").attr("disabled", false);
                         }
-                        if (result ==="22") {
+                        if (result === "22") {
                             $("#tip").text("用户名已存在");
                             $("#tip1").text("密码不一致");
-                            $("#but").attr("disabled",true);
+                            $("#but").attr("disabled", true);
                         }
-                        if (result ==="21") {
+                        if (result === "21") {
                             $("#tip").text("用户名已存在");
                             $("#tip1").text("√");
-                            $("#but").attr("disabled",true);
+                            $("#but").attr("disabled", true);
                         }
                     }
                 });

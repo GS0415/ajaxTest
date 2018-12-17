@@ -14,11 +14,12 @@ import java.util.List;
 
 @WebServlet("/list")
 public class ListServlet extends HttpServlet {
-    private IProService service =new ProServiceImpl();
+    private IProService service = new ProServiceImpl();
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Product> list=service.sel();
-        req.setAttribute("list",list);
-        req.getRequestDispatcher("/Jsps/list.jsp").forward(req,resp);
+        List<Product> list = service.sel();
+        req.setAttribute("list", list);
+        req.getRequestDispatcher("/Jsps/list.jsp").forward(req, resp);
     }
 }

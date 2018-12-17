@@ -24,7 +24,7 @@ public class DoRegister extends HttpServlet {
         if (user == null) {
             resp.getWriter().write("1");//可以注册
             System.out.println(pwd);
-            if(pwd!="") {
+            if (pwd != "") {
                 if (pwd.equals(pwds)) {
                     resp.getWriter().write("1");//可以注册 密码正确
                 } else {
@@ -33,7 +33,7 @@ public class DoRegister extends HttpServlet {
             }
         } else {
             resp.getWriter().write("2");//用户名存在
-            if(pwd!="") {
+            if (pwd != "") {
                 if (pwd.equals(pwds)) {
                     resp.getWriter().write("1");//不可以注册 密码正确
                 } else {

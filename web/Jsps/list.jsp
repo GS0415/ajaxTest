@@ -31,7 +31,8 @@
         tr:nth-child(odd) {
             background-color: beige;
         }
-        td a{
+
+        td a {
             color: red;
             text-decoration: none;
         }

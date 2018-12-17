@@ -1,4 +1,5 @@
 package com.Tomcat.dao;
+
 import com.Tomcat.pojo.Product;
 import com.Tomcat.pojo.User;
 import com.Tomcat.utils.IRowMap;
@@ -7,21 +8,22 @@ import com.Tomcat.utils.JdbcUtil;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-public class ProDaoImpl implements IProDao{
+
+public class ProDaoImpl implements IProDao {
 
     @Override
     public int add(Product pro) {
-        return JdbcUtil.zsg("insert into product(product_name,product_price,product_url,product_des) values(?,?,?,?)",pro.getProductName(),pro.getProductPrice(),pro.getProductUrl(),pro.getProductDes());
+        return JdbcUtil.zsg("insert into product(product_name,product_price,product_url,product_des) values(?,?,?,?)", pro.getProductName(), pro.getProductPrice(), pro.getProductUrl(), pro.getProductDes());
     }
 
     @Override
     public int del(int id) {
-        return JdbcUtil.zsg("delete from product where product_id=?",id);
+        return JdbcUtil.zsg("delete from product where product_id=?", id);
     }
 
     @Override
     public int update(Product pro) {
-        return JdbcUtil.zsg("update product set product_name=?,product_price=?,product_url=?,product_des=? where product_id=?",pro.getProductName(),pro.getProductPrice(),pro.getProductUrl(),pro.getProductDes(),pro.getProductId());
+        return JdbcUtil.zsg("update product set product_name=?,product_price=?,product_url=?,product_des=? where product_id=?", pro.getProductName(), pro.getProductPrice(), pro.getProductUrl(), pro.getProductDes(), pro.getProductId());
     }
 
     @Override
@@ -29,7 +31,7 @@ public class ProDaoImpl implements IProDao{
         return JdbcUtil.select("select * from product", new IRowMap<Product>() {
             @Override
             public Product rowMap(ResultSet rs) {
-                Product p =new Product();
+                Product p = new Product();
                 try {
                     p.setProductUrl(rs.getString("product_url"));
                     p.setProductName(rs.getString("product_name"));

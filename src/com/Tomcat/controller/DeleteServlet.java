@@ -9,12 +9,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 @WebServlet("/delete")
 public class DeleteServlet extends HttpServlet {
-    IProService service =new ProServiceImpl();
+    IProService service = new ProServiceImpl();
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       int id = Integer.parseInt(req.getParameter("productId"));
+        int id = Integer.parseInt(req.getParameter("productId"));
         service.del(id);
         resp.sendRedirect("list");
     }

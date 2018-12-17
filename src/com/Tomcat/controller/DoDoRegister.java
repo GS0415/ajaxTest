@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 @WebServlet("/doDoRegister")
 public class DoDoRegister extends HttpServlet {
     @Override
@@ -18,7 +19,7 @@ public class DoDoRegister extends HttpServlet {
         User user = new User();
         IUserService service = new UserServiceImpl();
         String pwd = req.getParameter("pwd");
-        String username =req.getParameter("username");
+        String username = req.getParameter("username");
         String tel = req.getParameter("tel");
         user.setTel(tel);
         user.setUserName(username);

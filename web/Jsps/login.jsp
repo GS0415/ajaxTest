@@ -10,12 +10,13 @@
 <head>
     <title>登录</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
 
         }
-        #login{
+
+        #login {
             width: 200px;
             height: 130px;
             background-color: deepskyblue;

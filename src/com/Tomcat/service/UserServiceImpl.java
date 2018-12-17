@@ -9,6 +9,7 @@ import java.util.List;
 
 public class UserServiceImpl implements IUserService {
     private IUserDao dao = new UserDaoImpl();
+
     @Override
     public int add(User user) {
         return dao.add(user);
@@ -36,6 +37,6 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User selOneUser(String name) {
-            return dao.selOneUser(name);
+        return dao.selOneUser(name);
     }
 }

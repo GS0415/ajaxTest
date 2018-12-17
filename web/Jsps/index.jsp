@@ -21,7 +21,7 @@
 <body>
 <div id="menu">
     <%
-        System.out.println( request.getAttribute("width"));
+        System.out.println(request.getAttribute("width"));
     %>
 </div>
 </body>

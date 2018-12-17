@@ -1,11 +1,12 @@
 package com.Tomcat.pojo;
 
 public class Product {
-    private int   productId;
+    private int productId;
     private String productName;
     private double productPrice;
     private String productDes;
     private String productUrl;
+
     @Override
     public String toString() {
         return "Product{" +

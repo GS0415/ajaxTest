@@ -17,18 +17,18 @@ public class DoLogin extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         IUserService service = new UserServiceImpl();
-        User user=null;
-        String pw =req.getParameter("pwd");
-        String name=req.getParameter("username");
-        user=service.selOneUser(name);
+        User user = null;
+        String pw = req.getParameter("pwd");
+        String name = req.getParameter("username");
+        user = service.selOneUser(name);
         System.out.println(name);
-        if (user!=null){
-            if (user.getPassWord().equals(pw)){
+        if (user != null) {
+            if (user.getPassWord().equals(pw)) {
                 resp.sendRedirect("list");
-            }else {
+            } else {
                 resp.sendRedirect("login");
             }
-        }else {
+        } else {
             resp.sendRedirect("register");
         }
 

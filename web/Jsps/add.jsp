@@ -12,10 +12,10 @@
 </head>
 <body>
 <form action="doAdd">
-    商品名称：<input type="text" name="name" ><br>
-    商品价格：<input type="text" name="price" ><br>
-    商品图片：<input type="text" name="url" ><br>
-    商品描述：<input type="text" name="des" ><br>
+    商品名称：<input type="text" name="name"><br>
+    商品价格：<input type="text" name="price"><br>
+    商品图片：<input type="text" name="url"><br>
+    商品描述：<input type="text" name="des"><br>
     <input type="submit" value="添加">
 </form>
 </body>

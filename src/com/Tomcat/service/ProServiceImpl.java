@@ -7,8 +7,9 @@ import com.Tomcat.pojo.User;
 
 import java.util.List;
 
-public class ProServiceImpl implements IProService{
-    private IProDao dao =new ProDaoImpl();
+public class ProServiceImpl implements IProService {
+    private IProDao dao = new ProDaoImpl();
+
     @Override
     public int add(Product pro) {
         return dao.add(pro);

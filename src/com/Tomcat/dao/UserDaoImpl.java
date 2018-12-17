@@ -11,7 +11,7 @@ import java.util.List;
 public class UserDaoImpl implements IUserDao {
     @Override
     public int add(User user) {
-        return JdbcUtil.zsg("insert into user(username,password,tel) values(?,?,?)",user.getUserName(),user.getPassWord(),user.getTel());
+        return JdbcUtil.zsg("insert into user(username,password,tel) values(?,?,?)", user.getUserName(), user.getPassWord(), user.getTel());
     }
 
     @Override
