@@ -14,7 +14,6 @@ import java.io.IOException;
 @WebServlet("/doRegister")
 public class DoRegister extends HttpServlet {
     private IUserService service = new UserServiceImpl();
-
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("us");

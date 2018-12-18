@@ -14,6 +14,7 @@ import java.io.IOException;
 
 @WebServlet("/doLogin")
 public class DoLogin extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         IUserService service = new UserServiceImpl();

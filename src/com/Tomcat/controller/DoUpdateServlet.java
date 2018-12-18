@@ -14,7 +14,6 @@ import java.io.IOException;
 @WebServlet("/doUpdate")
 public class DoUpdateServlet extends HttpServlet {
     private IProService service = new ProServiceImpl();
-
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");

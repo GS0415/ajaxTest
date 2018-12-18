@@ -35,6 +35,7 @@
         td a {
             color: red;
             text-decoration: none;
+
         }
     </style>
 </head>

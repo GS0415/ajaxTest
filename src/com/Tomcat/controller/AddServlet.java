@@ -9,6 +9,7 @@ import java.io.IOException;
 
 @WebServlet("/add")
 public class AddServlet extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("Jsps/add.jsp").forward(req, resp);

@@ -33,7 +33,6 @@ public class UserDaoImpl implements IUserDao {
     public User selOne(int id) {
         return null;
     }
-
     @Override
     public User selOneUser(String name) {
         return JdbcUtil.selectOne("select * from user where username=?", new IRowMap<User>() {

@@ -17,6 +17,7 @@
     商品图片：<input type="text" name="url"><br>
     商品描述：<input type="text" name="des"><br>
     <input type="submit" value="添加">
+
 </form>
 </body>
 </html>

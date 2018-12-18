@@ -15,6 +15,7 @@
             width: 1920px;
             height: 1080px;
             background-color: beige;
+
         }
     </style>
 </head>

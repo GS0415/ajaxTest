@@ -13,7 +13,6 @@ public interface IProDao {
     int update(Product pro);
 
     List<Product> sel();
-
     Product selOne(int id);
     /*User SelOneUser(String name);*/
 }

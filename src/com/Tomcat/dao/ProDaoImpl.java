@@ -25,7 +25,6 @@ public class ProDaoImpl implements IProDao {
     public int update(Product pro) {
         return JdbcUtil.zsg("update product set product_name=?,product_price=?,product_url=?,product_des=? where product_id=?", pro.getProductName(), pro.getProductPrice(), pro.getProductUrl(), pro.getProductDes(), pro.getProductId());
     }
-
     @Override
     public List<Product> sel() {
         return JdbcUtil.select("select * from product", new IRowMap<Product>() {

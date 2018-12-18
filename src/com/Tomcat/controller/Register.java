@@ -9,6 +9,7 @@ import java.io.IOException;
 
 @WebServlet("/register")
 public class Register extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("Jsps/register.jsp").forward(req, resp);
