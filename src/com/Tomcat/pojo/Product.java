@@ -6,6 +6,7 @@ public class Product {
     private double productPrice;
     private String productDes;
     private String productUrl;
+
     @Override
     public String toString() {
         return "Product{" +

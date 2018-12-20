@@ -20,6 +20,7 @@ public class JdbcUtil {  //  Jdbc 工具类  写所有方法
             e.printStackTrace();
         }
     }
+
     //创建（封装）连接方法
     public static Connection getConnection() {
         Connection conn = null;

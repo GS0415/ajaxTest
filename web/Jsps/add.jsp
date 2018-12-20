@@ -11,6 +11,7 @@
     <title>添加</title>
 </head>
 <body>
+
 <form action="doAdd">
     商品名称：<input type="text" name="name"><br>
     商品价格：<input type="text" name="price"><br>

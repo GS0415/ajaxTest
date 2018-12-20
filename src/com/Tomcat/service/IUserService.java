@@ -15,5 +15,6 @@ public interface IUserService {
     List<User> sel();
 
     User selOne(int id);
+
     User selOneUser(String name);
 }

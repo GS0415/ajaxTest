@@ -6,6 +6,7 @@ import com.Tomcat.pojo.User;
 import java.util.List;
 
 public interface IProDao {
+
     int add(Product pro);
 
     int del(int id);

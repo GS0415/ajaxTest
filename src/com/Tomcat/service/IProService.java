@@ -13,5 +13,6 @@ public interface IProService {
     int update(Product pro);
 
     List<Product> sel();
+
     Product selOne(int id);
 }

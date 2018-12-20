@@ -18,7 +18,6 @@
     商品图片：<input type="text" name="url" value="${pro.productUrl}"><br>
     商品描述：<input type="text" name="des" value="${pro.productDes}"><br>
     <input type="submit" value="修改">
-
 </form>
 </body>
 </html>

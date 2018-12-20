@@ -34,7 +34,6 @@
         <input type="submit" value="登录">
         <a href="register">注册</a>
     </form>
-
 </div>
 </body>
 </html>

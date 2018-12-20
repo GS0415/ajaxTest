@@ -34,6 +34,7 @@ public class UserServiceImpl implements IUserService {
     public User selOne(int id) {
         return null;
     }
+
     @Override
     public User selOneUser(String name) {
         return dao.selOneUser(name);

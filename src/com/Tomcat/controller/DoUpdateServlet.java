@@ -15,6 +15,7 @@ import java.io.IOException;
 public class DoUpdateServlet extends HttpServlet {
     private IProService service = new ProServiceImpl();
     @Override
+
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("name");
         Double price = Double.parseDouble(req.getParameter("price"));

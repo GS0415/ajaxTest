@@ -30,6 +30,7 @@ public class ProServiceImpl implements IProService {
 
         return dao.sel();
     }
+
     @Override
     public Product selOne(int id) {
         return dao.selOne(id);
